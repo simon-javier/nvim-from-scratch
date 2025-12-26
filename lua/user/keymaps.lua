@@ -39,3 +39,9 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode Acti
 
 vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("v", "<leader>sr", [[y:%s/\V<C-r>=escape(@", '/\')<CR>/<C-r>=escape(@", '/\')<CR>/gI<Left><Left><Left>]])
+
+vim.keymap.set("n", "<leader>fo", function()
+	require("conform").format({ bufnr = vim.api.nvim_get_current_buf() })
+end, { desc = "Format File" })
+
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename Symbol" })

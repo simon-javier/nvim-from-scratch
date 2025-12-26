@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
 
@@ -10,7 +10,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -20,7 +20,7 @@ vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv 'HOME' .. '/.nvim/undodir'
+vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -39,10 +39,10 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -65,6 +65,8 @@ vim.opt.smartindent = true
 vim.opt.incsearch = true
 
 -- Keep a history of jump locations (stack) and restore view settings (view) when jumping
-vim.opt.jumpoptions = 'stack,view'
-vim.opt.colorcolumn = '80'
+vim.opt.jumpoptions = "stack,view"
+vim.opt.colorcolumn = "80"
 vim.opt.linebreak = true
+
+vim.opt.foldenable = false
