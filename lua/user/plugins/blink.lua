@@ -7,6 +7,7 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			snippets = { preset = "luasnip" },
 			sources = {
 				-- add lazydev to your completion providers
 				default = { "laravel", "lazydev", "lsp", "path", "snippets", "buffer" },

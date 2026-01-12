@@ -60,8 +60,16 @@ return {
 				filetypes = { "php", "blade", "html" },
 			}
 
+			vim.lsp.config["emmet_language_server"] = {
+				filetypes = { "php", "blade", "html" },
+			}
+
 			vim.lsp.config["intelephense"] = {
-				filetypes = { "php", "blade" },
+				filetypes = { "php", "blade", "html" },
+			}
+
+			vim.lsp.config["phpactor"] = {
+				filetypes = { "php", "blade", "html" },
 			}
 		end,
 	},

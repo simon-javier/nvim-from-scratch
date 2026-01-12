@@ -6,11 +6,14 @@ return {
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 		dependencies = {
-			"rafamadriz/friendly-snippets",
-			"onecentlin/laravel-blade-snippets-vscode",
+			{
+				url = "git@github.com:simon-javier/friendly-snippets.git",
+				branch = "preference/blade-snippets",
+			},
 		},
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
+			require("luasnip.loaders.from_snipmate").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snippets" } })
 		end,
 	},
 }

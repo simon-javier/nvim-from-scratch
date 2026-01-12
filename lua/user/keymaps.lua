@@ -46,5 +46,4 @@ end, { desc = "Format File" })
 
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename Symbol" })
 
-vim.keymap.set("n", "<leader>Lr", vim.cmd.LspRestart, { desc = "Restart LSP" })
 vim.keymap.set("n", "s", "s")
