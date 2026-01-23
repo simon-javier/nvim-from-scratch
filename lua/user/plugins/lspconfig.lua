@@ -71,6 +71,16 @@ return {
 			vim.lsp.config["phpactor"] = {
 				filetypes = { "php", "blade", "html" },
 			}
+
+			vim.lsp.config["laravel_ls"] = {
+				root_dir = function(bufnr, on_dir)
+					local fname = vim.fn.bufname(bufnr)
+					local root = require("lspconfig.util").root_pattern("artisan")(fname)
+					if root then
+						on_dir(root)
+					end
+				end,
+			}
 		end,
 	},
 }

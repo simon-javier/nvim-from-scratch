@@ -8,7 +8,7 @@ return {
 				html = { "prettierd", "prettier", stop_after_first = true },
 				css = { "prettierd", "prettier", stop_after_first = true },
 				blade = { "blade-formatter" },
-				php = { "pint" },
+				php = { "php-cs-fixer" },
 				["_"] = { "trim_whitespace" },
 			},
 			format_on_save = {
