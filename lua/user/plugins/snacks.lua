@@ -14,6 +14,7 @@ return {
 				timeout = 3000,
 			},
 			picker = { enabled = true },
+			input = { enabled = true },
 			quickfile = { enabled = true },
 			toggle = { enabled = true },
 			scope = { enabled = true },
