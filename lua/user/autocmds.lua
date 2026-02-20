@@ -19,6 +19,7 @@ autocmd("BufEnter", {
 	command = "set fo-=c fo-=r fo-=o",
 })
 
+-- autocmd for folding
 autocmd("FileType", {
 	group = file_group,
 	callback = function()
@@ -34,14 +35,16 @@ autocmd("FileType", {
 
 		local ok, _ = pcall(vim.treesitter.start)
 		if ok then
-			vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-			vim.wo[0][0].foldmethod = "expr"
+			vim.wo[0][0].foldmethod = "manual"
 
-			-- Only set indent if nvim-treesitter is actually loaded
-			local has_ts, _ = pcall(require, "nvim-treesitter")
-			if has_ts then
-				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-			end
+			-- vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+			-- vim.wo[0][0].foldmethod = "expr"
+			--
+			-- -- Only set indent if nvim-treesitter is actually loaded
+			-- local has_ts, _ = pcall(require, "nvim-treesitter")
+			-- if has_ts then
+			-- 	vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+			-- end
 		end
 	end,
 })

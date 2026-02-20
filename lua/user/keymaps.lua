@@ -47,3 +47,5 @@ end, { desc = "Format File" })
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename Symbol" })
 
 vim.keymap.set("n", "s", "s")
+
+vim.keymap.set({ "i", "n" }, "<M-v>", "⚡", { desc = "Lightning Emoji for Livewire" })

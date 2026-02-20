@@ -57,19 +57,19 @@ return {
 				},
 			})
 			vim.lsp.config["html"] = {
-				filetypes = { "php", "blade", "html" },
+				filetypes = { "php", "blade", "html", "stub" },
 			}
 
 			vim.lsp.config["emmet_language_server"] = {
-				filetypes = { "php", "blade", "html" },
+				filetypes = { "php", "blade", "html", "stub" },
 			}
 
 			vim.lsp.config["intelephense"] = {
-				filetypes = { "php", "blade", "html" },
+				filetypes = { "php", "blade", "html", "stub" },
 			}
 
-			vim.lsp.config["phpactor"] = {
-				filetypes = { "php", "blade", "html" },
+			vim.lsp.config["php-cs-fixer"] = {
+				filetypes = { "php", "blade", "html", "stub" },
 			}
 
 			vim.lsp.config["laravel_ls"] = {
@@ -80,6 +80,7 @@ return {
 						on_dir(root)
 					end
 				end,
+				filetypes = { "php", "blade", "html", "stub" },
 			}
 		end,
 	},
